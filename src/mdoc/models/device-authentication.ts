@@ -1,9 +1,14 @@
-import { type CborDecodeOptions, CborStructure, cborDecode, DataItem } from '../../cbor'
+import { type CborDecodeOptions, CborStructure, DataItem, cborDecode } from '../../cbor'
 import { DeviceNamespaces, type DeviceNamespacesStructure } from './device-namespaces'
 import type { DocType } from './doctype'
-import { SessionTranscript } from './session-transcript'
+import { SessionTranscript, type SessionTranscriptStructure } from './session-transcript'
 
-export type DeviceAuthenticationStructure = [string, any, DocType, DataItem<DeviceNamespacesStructure>]
+export type DeviceAuthenticationStructure = [
+  string,
+  SessionTranscriptStructure,
+  DocType,
+  DataItem<DeviceNamespacesStructure>,
+]
 
 export type DeviceAuthenticationOptions = {
   sessionTranscript: SessionTranscript
