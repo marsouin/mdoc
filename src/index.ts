@@ -4,6 +4,7 @@ export * from './context'
 
 export * from './mdoc'
 export * from './cose'
+export * from './cbor'
 export * from './utils'
 
 export * from './holder'
